@@ -3,90 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101a35">
 
-    <title>Abdullah Alom - Coin Reward</title>
+    <title>Abdullah Alom | My Reward World</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <header class="header">
+<div class="app">
 
-        <h1>🌟 Abdullah Alom 🌟</h1>
+    <header class="hero">
 
-        <img
-            src="abdullah.jpg"
-            alt="Abdullah Alom"
-            class="profile-photo"
-        >
+        <div class="top-bar">
+            <span class="brand">
+                <i class="fa-solid fa-star"></i> MY REWARD WORLD
+            </span>
+            <span class="live-status">
+                <span class="live-dot"></span> DAILY TRACKER
+            </span>
+        </div>
 
-        <p>My Good Habits & Daily Activities</p>
+        <div class="profile-area">
+
+            <div class="avatar-wrap">
+                <img src="abdullah.jpg" alt="Abdullah Alom">
+                <span class="avatar-star">★</span>
+            </div>
+
+            <h1>Abdullah Alom</h1>
+            <p class="hero-subtitle">Every Good Deed Makes You Shine!</p>
+
+            <div class="level-pill">
+                <i class="fa-solid fa-crown"></i>
+                LITTLE CHAMPION
+            </div>
+
+        </div>
+
+        <div class="hero-decoration decoration-one">✦</div>
+        <div class="hero-decoration decoration-two">✧</div>
 
     </header>
 
 
-    <div class="coin-container">
+    <main class="main-content">
 
-        <div class="coin-box">
+        <!-- COIN BALANCE -->
 
-            🪙 Total Coins
+        <section class="balance-card">
 
-            <div id="coins">0</div>
+            <div class="balance-top">
+                <span><i class="fa-solid fa-wallet"></i> MY COIN BALANCE</span>
+                <span class="coin-icon">🪙</span>
+            </div>
 
-        </div>
+            <div class="balance-number">
+                <span id="coins">0</span>
+                <small>COINS</small>
+            </div>
 
-    </div>
+            <div class="balance-bottom">
+                <span>Keep earning through good habits!</span>
+                <i class="fa-solid fa-sparkles"></i>
+            </div>
+
+        </section>
 
 
-    <main class="container">
+        <!-- DAILY STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon green-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                    <strong id="goodCount">0</strong>
+                    <small>Good Deeds</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon red-icon">
+                    <i class="fa-solid fa-minus"></i>
+                </div>
+                <div>
+                    <strong id="badCount">0</strong>
+                    <small>Bad Actions</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon gold-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div>
+                    <strong id="todayCoins">0</strong>
+                    <small>Today's Coins</small>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+
+        <section class="progress-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Today's Progress</h2>
+                    <p>Make every day count!</p>
+                </div>
+                <span class="progress-emoji">🚀</span>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="progress-footer">
+                <span id="progressText">0 good deeds completed</span>
+                <strong id="progressPercent">0%</strong>
+            </div>
+
+        </section>
+
 
         <!-- GOOD ACTIVITIES -->
 
-        <h2 class="good-heading">
-            ✅ Good Activities (+5 Coins)
-        </h2>
+        <section class="activity-section">
 
-        <div id="goodTasks"></div>
+            <div class="activity-heading">
+                <div class="heading-icon good-heading-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div>
+                    <h2>Good Activities</h2>
+                    <p>Earn 5 coins for each good deed</p>
+                </div>
+                <span class="reward-label">+5 🪙</span>
+            </div>
+
+            <div id="goodTasks" class="task-list"></div>
+
+        </section>
 
 
         <!-- BAD ACTIVITIES -->
 
-        <h2 class="bad-heading">
-            ❌ Bad Activities (-2 Coins)
-        </h2>
+        <section class="activity-section">
 
-        <div id="badTasks"></div>
+            <div class="activity-heading">
+                <div class="heading-icon bad-heading-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div>
+                    <h2>Bad Activities</h2>
+                    <p>Each selected action deducts 2 coins</p>
+                </div>
+                <span class="penalty-label">−2 🪙</span>
+            </div>
+
+            <div id="badTasks" class="task-list"></div>
+
+        </section>
 
 
-        <!-- ACTIVITY HISTORY -->
+        <!-- HISTORY -->
 
-        <section class="history-box">
+        <section class="history-card">
 
-            <h2>📜 Activity History</h2>
+            <div class="history-heading">
+                <div>
+                    <h2><i class="fa-solid fa-clock-rotate-left"></i> Activity History</h2>
+                    <p>Your recent activities</p>
+                </div>
+
+                <span class="history-badge">RECENT</span>
+            </div>
 
             <div id="history"></div>
 
         </section>
 
 
+        <!-- RESET -->
+
         <button class="reset-button" id="resetButton">
-            🔄 Reset All Coins
+            <i class="fa-solid fa-rotate-left"></i>
+            Reset All Coins & History
         </button>
 
     </main>
 
 
     <footer>
-
-        <h3>🌟 Keep Doing Good Things! 🌟</h3>
-
-        <p>Made for Abdullah Alom</p>
-
+        <div class="footer-star">✦</div>
+        <h3>Keep Shining, Abdullah!</h3>
+        <p>Small Good Deeds • Big Rewards</p>
+        <span>Made with ❤️ for Abdullah Alom</span>
     </footer>
 
+</div>
 
-    <script src="script.js"></script>
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
