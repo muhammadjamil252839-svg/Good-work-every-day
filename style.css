@@ -1,1 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f5ff;
+    color: #263238;
+}
+
+/* HEADER */
+
+.header {
+    background: linear-gradient(135deg, #155e75, #0f766e);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.header p {
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+/* PROFILE PHOTO */
+
+.profile-photo {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid gold;
+    box-shadow: 0 4px 15px #0004;
+}
+
+/* COIN SECTION */
+
+.coin-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    text-align: center;
+    padding: 12px;
+    box-shadow: 0 3px 10px #0002;
+}
+
+.coin-box {
+    display: inline-block;
+    background: #fff3cd;
+    border: 2px solid #f4c542;
+    border-radius: 15px;
+    padding: 10px 30px;
+    color: #946200;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#coins {
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+/* HEADINGS */
+
+.good-heading,
+.bad-heading {
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    margin: 25px 0 15px;
+    font-size: 21px;
+}
+
+.good-heading {
+    background: #16a34a;
+}
+
+.bad-heading {
+    background: #dc2626;
+}
+
+/* TASK BOX */
+
+.task {
+    background: white;
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px #0001;
+}
+
+.task-name {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* BUTTONS */
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.good-btn {
+    background: #16a34a;
+}
+
+.bad-btn {
+    background: #dc2626;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+/* HISTORY */
+
+.history-box {
+    background: white;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0001;
+}
+
+.history-box h2 {
+    margin-bottom: 15px;
+}
+
+.history-item {
+    padding: 12px 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.positive {
+    color: #16a34a;
+}
+
+.negative {
+    color: #dc2626;
+}
+
+/* RESET BUTTON */
+
+.reset-button {
+    display: block;
+    margin: 25px auto;
+    background: #475569;
+    padding: 13px 25px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: #155e75;
+    color: white;
+    padding: 25px 10px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin-top: 8px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .profile-photo {
+        width: 125px;
+        height: 125px;
+    }
+
+    .task {
+        padding: 12px 9px;
+    }
+
+    .task-name {
+        font-size: 13px;
+    }
+
+    button {
+        padding: 10px 11px;
+        font-size: 12px;
+    }
+
+    .good-heading,
+    .bad-heading {
+        font-size: 18px;
+    }
+
+}
